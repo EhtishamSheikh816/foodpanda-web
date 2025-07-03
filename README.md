@@ -31,7 +31,7 @@ Welcome to the **Foodpanda Clone** – a responsive food ordering web app built 
 
 ## 📸 Screenshots
 
-> `![Homepage](images/homePage.png)`
+> `![homePage](https://github.com/user-attachments/assets/4c093327-4a5e-4054-8cf1-0f1ec018ec6e)`
 
 ---
 
