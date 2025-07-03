@@ -1,0 +1,120 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: "Poppins", sans-serif;
+  /* background: linear-gradient(135deg, #e91e63, #ff4081); */
+  background-image: url(../images/heroBg.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Login Container */
+.login-container {
+  /* background: #ffffff; */
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Headings */
+.login-box h1 {
+  text-align: center;
+  color: #e91e63;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: black;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+input:focus {
+  border-color: #e91e63;
+  outline: none;
+}
+
+button {
+  margin-top: 1.5rem;
+  background-color: #e91e63;
+  color: #fff;
+  border: none;
+  padding: 0.9rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d81b60;
+}
+
+.register-link {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.register-link a {
+  color: #e91e63;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+  }
+
+  .login-box h1 {
+    font-size: 1.75rem;
+  }
+
+  input,
+  button {
+    font-size: 0.95rem;
+  }
+}
