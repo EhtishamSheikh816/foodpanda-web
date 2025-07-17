@@ -1,3 +1,4 @@
+// Navigation Functions
 const authentication = () => {
   location.href = "/authentication.html";
 };
@@ -18,17 +19,14 @@ const loginToAdmin = () => {
   location.href = "adminLogin.html";
 };
 
-//                                                                      AUTHENTICATION
-//                      User Authentication
+// User Signup/Login
 const getUserName = document.querySelector("#userName");
 const getUserEmail = document.querySelector("#userEmail");
 const getUserPassword = document.querySelector("#userPassword");
-
 let userArray = JSON.parse(localStorage.getItem("userData") || "[]");
 
 function userSignup(event) {
   event.preventDefault();
-
   let isUserEmail = userArray.find(
     (check) => check.userEmail === getUserEmail.value
   );
@@ -68,7 +66,6 @@ function userSignup(event) {
 
 function userLogin(event) {
   event.preventDefault();
-
   let notUserEmailExist = userArray.find(
     (u) => u.userEmail === getUserEmail.value
   );
@@ -104,43 +101,39 @@ function userLogin(event) {
   location.href = "userPage.html";
 }
 
-// This is used in add item function.
+function userLogout() {
+  location.href = "index.html";
+}
+
+// Items Handling
 let allItemArr = JSON.parse(localStorage.getItem("allItems") || "[]");
-
-// show all items
 const getAllItems = document.querySelector("#allItems");
-
-allItemArr.map((allItem) => {
-  getAllItems.innerHTML += `<div class="card">
-          <img
-            src=${allItem.itemImageUrl}
-            alt="Pizza"
-          />
+if (getAllItems) {
+  allItemArr.map((allItem) => {
+    getAllItems.innerHTML += `<div class="card">
+          <img src=${allItem.itemImageUrl} alt="Pizza" />
           <div class="card-body">
             <div class="restName">
               Resturant: <span class="restaurant-name">${allItem.restaurantName}</span>
             </div>
             <div class="food-name">${allItem.itemName}</div>
-            <div class="description">
-              ${allItem.itemDescription}
-            </div>
+            <div class="description">${allItem.itemDescription}</div>
             <div class="price">Rs. ${allItem.itemPrice}</div>
             <button class="restBtn">Add To Cart</button>
           </div>
         </div>`;
-});
+  });
+}
 
-//                      ADMIN AUTHENTICATION
+// Admin Signup/Login
 const getReturantName = document.querySelector("#returantName");
 const getAdminName = document.querySelector("#adminName");
 const getAdminEmail = document.querySelector("#adminEmail");
 const getAdminPassword = document.querySelector("#adminPassword");
-
 let adminArr = JSON.parse(localStorage.getItem("adminData") || "[]");
 
 const adminSignup = (event) => {
   event.preventDefault();
-
   let isResturantExist = adminArr.find(
     (checker) => checker.resturantName === getReturantName.value
   );
@@ -193,7 +186,6 @@ const adminSignup = (event) => {
 
 const adminLogin = (event) => {
   event.preventDefault();
-
   let notEmailExist = adminArr.find(
     (check) => check.adminEmail === getAdminEmail.value
   );
@@ -231,7 +223,6 @@ const adminLogin = (event) => {
 };
 
 let availableUser = localStorage.getItem("currentUser");
-
 const getRestaurantName = document.querySelector("#restaurantName");
 const getImageUrl = document.querySelector("#imageUrl");
 const getItemName = document.querySelector("#itemName");
@@ -242,10 +233,10 @@ const getAdminUserName = document.querySelector("#adminUserName");
 const getBrandName = document.querySelector(".brand-name");
 
 let a = adminArr.map((items) => {
-  if (items.adminEmail === availableUser) {
+  if (getAdminUserName && items.adminEmail === availableUser) {
     getAdminUserName.innerHTML = items.adminName;
   }
-  if (items.adminEmail === availableUser) {
+  if (getBrandName && getRestaurantName && items.adminEmail === availableUser) {
     getBrandName.innerHTML = items.resturantName;
     getRestaurantName.value = items.resturantName;
   }
@@ -254,22 +245,17 @@ let a = adminArr.map((items) => {
 let itemsArr = JSON.parse(localStorage.getItem(availableUser) || "[]");
 
 const showAdminData = () => {
+  if (!getShowItems) return;
   getShowItems.innerHTML = "";
-
   itemsArr.map((items, index) => {
     getShowItems.innerHTML += `<div class="card">
-          <img
-            src=${items.itemImageUrl}
-            alt="Pizza"
-          />
+          <img src=${items.itemImageUrl} alt="Pizza" />
           <div class="card-body">
             <div class="restName">
               Resturant: <span class="restaurant-name">${items.restaurantName}</span>
             </div>
             <div class="food-name">${items.itemName}</div>
-            <div class="description">
-              ${items.itemDescription}
-            </div>
+            <div class="description">${items.itemDescription}</div>
             <div class="price">Rs. ${items.itemPrice}</div>
             <button class="restBtn" onclick="delAdminItem(${index})">Delete</button>
           </div>
@@ -279,7 +265,6 @@ const showAdminData = () => {
 
 const addItems = (event) => {
   event.preventDefault();
-
   let items = {
     restaurantName: getRestaurantName.value,
     itemImageUrl: getImageUrl.value,
@@ -287,29 +272,24 @@ const addItems = (event) => {
     itemPrice: getPrice.value,
     itemDescription: getDescription.value,
   };
-
   itemsArr.push(items);
   localStorage.setItem(availableUser, JSON.stringify(itemsArr));
-  // All Resturant Item In One Array
   allItemArr.push(items);
   localStorage.setItem("allItems", JSON.stringify(allItemArr));
-
   getImageUrl.value = "";
   getItemName.value = "";
   getPrice.value = "";
   getDescription.value = "";
-
   showAdminData();
 };
+
 showAdminData();
 
 const delAdminItem = (index) => {
   itemsArr.splice(index, 1);
   localStorage.setItem(availableUser, JSON.stringify(itemsArr));
-  // All Resturant Item Delete If Admin Want To Delete
   allItemArr.splice(index, 1);
   localStorage.setItem("allItems", JSON.stringify(allItemArr));
-
   showAdminData();
 };
 
