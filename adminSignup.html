@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Signup - Foodpanda</title>
+    <link rel="stylesheet" href="style/adminSignup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form class="signup-form" onsubmit="adminSignup(event)">
+        <h1>Admin Signup</h1>
+        <div class="input-group">
+          <label for="returantName">Restaurant Name</label>
+          <input
+            type="text"
+            id="returantName"
+            placeholder="Enter Restaurant Name"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="adminName">Name</label>
+          <input
+            type="text"
+            id="adminName"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="adminEmail">Email</label>
+          <input
+            type="email"
+            id="adminEmail"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="adminPassword">Password</label>
+          <input
+            type="password"
+            id="adminPassword"
+            placeholder="Enter password"
+            required
+          />
+        </div>
+        <button type="submit" class="btn" onclick="adminSignup()">
+          Sign Up
+        </button>
+      </form>
+      <p class="login-link">
+        Already have an account? <a href="adminLogin.html">Login</a>
+      </p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

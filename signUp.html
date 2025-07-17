@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foodpanda Sign Up</title>
+    <link rel="stylesheet" href="style/signUp.css" />
+  </head>
+  <body>
+    <div class="signup-container">
+      <div class="signup-box">
+        <h1>Foodpanda</h1>
+        <p class="subtitle">Create your User account</p>
+        <form onsubmit="userSignup(event)">
+          <label for="userName">Full Name</label>
+          <input type="text" id="userName" placeholder="John Doe" required />
+
+          <label for="userEmail">Email Address</label>
+          <input
+            type="email"
+            id="userEmail"
+            placeholder="you@example.com"
+            required
+          />
+
+          <label for="userPassword">Password</label>
+          <input
+            type="password"
+            id="userPassword"
+            placeholder="Create a password"
+            required
+          />
+
+          <button type="submit" onclick="userSignup()">Sign Up</button>
+        </form>
+        <p class="login-link">
+          Already have an account? <a href="login.html">Login</a>
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>

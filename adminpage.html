@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/adminPage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <title>Admin Page</title>
+  </head>
+  <body>
+    <!--                                                            NAVBAR                                                              -->
+    <header id="head">
+      <div id="headlft">
+        <img src="images/navbarIcon.svg" alt="Foodpanda Image" id="headImg" />
+        <p id="headPara">foodpanda</p>
+      </div>
+      <div id="headcntr">
+        <h1>
+          Hi, <span id="adminUserName">Dear</span> <span class="wave">👋</span>
+        </h1>
+      </div>
+      <div id="headrght">
+        <button class="headBtn" onclick="adminLogOut()">Log Out</button>
+      </div>
+    </header>
+
+    <!--                                                                HERO                                                             -->
+    <div class="hero">
+      <div id="herolft">
+        <h1>
+          Welcome to Your, <span class="brand-name">Hotel</span> Restaurant!
+        </h1>
+        <img src="images/foodpandaMobile.png" alt="Foodpanda Mobile" />
+      </div>
+      <div id="herorght">
+        <h1>🍽 Add Menu Item</h1>
+        <form onsubmit="addItems(event)">
+          <label class="label" for="restaurantName">Restaurant Name</label>
+          <input
+            type="text"
+            id="restaurantName"
+            class="inp"
+            name="restaurantName"
+            placeholder="Enter Your Resturant Name"
+            readonly
+          />
+
+          <label class="label" for="imageUrl">Image URL</label>
+          <input
+            type="url"
+            id="imageUrl"
+            class="inp"
+            name="imageUrl"
+            placeholder="Enter Image URL"
+            required
+          />
+
+          <label class="label" for="itemName">Item Name</label>
+          <input
+            type="text"
+            id="itemName"
+            class="inp"
+            name="itemName"
+            placeholder="Enter Your Items Name"
+            required
+          />
+
+          <label class="label" for="price">Price</label>
+          <input
+            type="number"
+            id="price"
+            class="inp"
+            name="price"
+            placeholder="Enter Your Price"
+            required
+          />
+
+          <label class="label" for="description">Description</label>
+          <input
+            type="text"
+            id="description"
+            class="inp"
+            name="description"
+            placeholder="Enter Your Description"
+            required
+          />
+
+          <button type="submit" id="heroBtn" onclick="addItems()">
+            Add Item
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!--                                                    RESTURANT ITEM                                                -->
+    <div id="resturantSec">
+      <h1>Your Resturant Items...🥄🍴🔪</h1>
+      <div id="resturantItems"></div>
+    </div>
+
+    <!--                                                    FOOTER                                                -->
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="countries-row">
+          <span>Labs</span>
+          <span class="countries-row-border">|</span>
+          <span>Cambodia</span>
+          <span class="countries-row-border">|</span>
+          <span>Myanmar</span>
+          <span class="countries-row-border">|</span>
+          <span>Thailand</span>
+          <span class="countries-row-border">|</span>
+          <span>Hong Kong</span>
+          <span class="countries-row-border">|</span>
+          <span>Taiwan</span>
+          <span class="countries-row-border">|</span>
+          <span>Malaysia</span>
+          <span class="countries-row-border">|</span>
+          <span>Philippines</span>
+          <span class="countries-row-border">|</span>
+          <span>Singapore</span>
+          <span class="countries-row-border">|</span>
+          <span>Bangladesh</span>
+        </div>
+
+        <div class="links-container">
+          <div class="links-column">
+            <h3>&copy; foodpanda</h3>
+          </div>
+          <div class="links-column">
+            <ul>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">pandapay Terms and Conditions</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Cashback Terms and Conditions</a></li>
+              <li><a href="#">Partner with Us</a></li>
+              <li><a href="#">All cities</a></li>
+              <li><a href="#">pandapro - Monthly Subscription Programme</a></li>
+              <li><a href="#">Ramzan deals</a></li>
+              <li><a href="#">Areas delivered in Lahore</a></li>
+            </ul>
+          </div>
+
+          <div class="links-column">
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Terms and Conditions</a></li>
+              <li><a href="#">Download foodpanda Apps</a></li>
+              <li><a href="#">Suggest a Restaurant</a></li>
+              <li><a href="#">All cuisines</a></li>
+              <li><a href="#">pandago - Request a Rider</a></li>
+              <li><a href="#">Update on COVID-19 in Pakistan</a></li>
+              <li><a href="#">foodpanda Home Chef</a></li>
+            </ul>
+          </div>
+
+          <div class="links-column">
+            <ul>
+              <li><a href="#">Refunds with pandapay</a></li>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Human rights policy</a></li>
+              <li><a href="#">Corporate Customer</a></li>
+              <li><a href="#">foodpanda Magazine</a></li>
+              <li><a href="#">foodpanda Vouchers & Coupons</a></li>
+              <li><a href="#">pandamart Grocery Delivery</a></li>
+              <li><a href="#">Become an Affiliate</a></li>
+              <li><a href="#">Areas delivered in Gujranwala</a></li>
+              <li><a href="#">Areas delivered in Peshawar</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-logos">
+            <span id="footerPanda-logo">
+              <img src="images/navbarIcon.svg" alt="foodpanda logo" />
+              <img src="images/foodpanda.svg" alt="Foodpanda text logo" />
+            </span>
+            <span>
+              <img src="images/delivery.svg" alt="Delivery Hero logo" />
+            </span>
+          </div>
+          <div class="footer-socials">
+            <a href="#"
+              ><img src="images/instagram.svg" alt="Instagram" width="24"
+            /></a>
+            <a href="#"
+              ><img src="images/facebook.svg" alt="Facebook" width="24"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Foodpanda</title>
+  </head>
+  <body>
+    <!--                                              HEADER                                              -->
+    <!-- <div id="top">
+      <img src="images/headBag.svg" alt="Baag Image" class="topImg" />
+      <button class="topBtn">SIGN UP FOR A BUSINESS ACCOUNT</button>
+      <button class="topBtn">SIGN UP TO BE A RESTURANT PARTNER</button>
+      <span id="topIcon">
+        <i class="fa-solid fa-xmark"></i>
+      </span>
+    </div> -->
+
+    <!--                                              NAVBAR                                              -->
+    <header id="header">
+      <span id="headMbl">
+        <button id="auth" onclick="authentication()">
+          <img src="images/accImg.svg" alt="Account Image" id="accImg" />
+        </button>
+        <span id="headMblLogo">
+          <img src="images/navbarIcon.svg" alt="Foodpanda Image" id="fpaImg" />
+          <p id="headPara">foodpanda</p>
+        </span>
+        <img src="images/headStoreIcon.svg" alt="Store Image" id="bagsIcon" />
+      </span>
+      <div id="headlft">
+        <img src="images/navbarIcon.svg" alt="Foodpanda Image" id="fpaImg" />
+        <p id="headPara">foodpanda</p>
+      </div>
+      <div id="headRght">
+        <button class="headBtn" onclick="logIn()">Log in</button>
+        <button class="headBtn" id="headBtn2" onclick="signUp()">
+          Sign up
+        </button>
+        <span id="headSec">
+          <img src="images/headGLobeIcon.svg" alt="Globe Image" />
+          <p>EN</p>
+          <i class="fa-solid fa-chevron-down" id="headV"></i>
+        </span>
+        <img src="images/headStoreIcon.svg" alt="Store Image" id="bagsIcon" />
+      </div>
+    </header>
+
+    <!--                                              HERO                                               -->
+    <div id="hero">
+      <div id="heroLft">
+        <h1>Enjoy discounts on your first order</h1>
+        <span id="heroBtn">
+          <button class="heroBtn" onclick="signupAsAdmin()">
+            SIGN UP FOR A ADMIN
+          </button>
+          <button class="heroBtn" onclick="loginToAdmin()">
+            LOGIN TO ADMIN
+          </button>
+        </span>
+      </div>
+      <div id="heroRght">
+        <img src="images/discountPanda.png" alt="Hero Image" />
+      </div>
+    </div>
+
+    <!--                                              ABOUT                                              -->
+    <div id="about">
+      <h1 class="head">You prepare the food, we handle the rest</h1>
+      <div id="abtSec">
+        <img src="images/aboutImg.jpg" alt="About Images" id="abtImg" />
+        <div id="abtText">
+          <h2>List your restaurant or shop on foodpanda</h2>
+          <p>
+            Would you like millions of new customers to enjoy your amazing food
+            and groceries? So would we!
+          </p>
+          <p>
+            It's simple: we list your menu and product lists online, help you
+            process orders, pick them up, and deliver them to hungry pandas – in
+            a heartbeat!
+          </p>
+          <p>Interested? Let's start our partnership today!</p>
+          <span>
+            <button id="abtBtn">Get started</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!--                                              city                                               -->
+    <div id="city">
+      <h1>Find us in these cities and many more!</h1>
+      <div id="citySec">
+        <div class="cityCard">
+          <img src="images/Karachi.jpg" alt="City Image" />
+          <p>Karachi</p>
+        </div>
+        <div class="cityCard">
+          <img src="/images/lahore.jpg" alt="Lahore" />
+          <p>Lahore</p>
+        </div>
+        <div class="cityCard">
+          <img src="/images/faisalabad.jpg" alt="Faislabad" />
+          <p>Faislabad</p>
+        </div>
+        <div class="cityCard">
+          <img src="/images/rawalpindi.jpg" alt="Rawalpindi" />
+          <p>Rawalpindi</p>
+        </div>
+        <div class="cityCard">
+          <img src="/images/murree.jpg" alt="City Image" />
+          <p>Murree</p>
+        </div>
+        <div class="cityCard">
+          <img src="/images/quetta.jpg" alt="City Image" />
+          <p>Quetta</p>
+        </div>
+        <div class="cityCard">
+          <img src="/images/islamabad.jpg" alt="City Image" />
+          <p>Islamabad</p>
+        </div>
+        <div class="cityCard">
+          <img src="/images/mangla.jpg" alt="City Image" />
+          <p>Mangla</p>
+        </div>
+        <div class="cityCard">
+          <img src="/images/bahawalpur.jpg" alt="City Image" />
+          <p>Bahawalpur</p>
+        </div>
+        <div class="cityCard">
+          <img src="/images/sargodha.jpg" alt="City Image" />
+          <p>Sarghoda</p>
+        </div>
+        <div class="cityCard">
+          <img src="/images/kamoke.jpg" alt="City Image" />
+          <p>Kamoke</p>
+        </div>
+        <div class="cityCard">
+          <img src="/images/wahhCannt.jpg" alt="City Image" />
+          <p>Wahh Cannt</p>
+        </div>
+        <div class="cityCard">
+          <img src="/images/rahimYarKhan.jpg" alt="City Image" />
+          <p>rahim Yar Khan</p>
+        </div>
+        <div class="cityCard">
+          <img src="/images/sadiqabad.jpg" alt="City Image" />
+          <p>Sadiqabad</p>
+        </div>
+        <div class="cityCard">
+          <img src="/images/sahiwal.jpg" alt="City Image" />
+          <p>Sahiwal</p>
+        </div>
+        <div class="cityCard">
+          <img src="/images/mardan.jpg" alt="City Image" />
+          <p>Mardan</p>
+        </div>
+        <div class="cityCard">
+          <img src="/images/larkana.jpg" alt="City Image" />
+          <p>Larkana</p>
+        </div>
+        <div class="cityCard">
+          <img src="/images/jhelum.jpg" alt="City Image" />
+          <p>Jhelum</p>
+        </div>
+        <div class="cityCard">
+          <img src="/images/abottabad.jpg" alt="City Image" />
+          <p>Abottabad</p>
+        </div>
+        <div class="cityCard">
+          <img src="/images/panoAqil.jpg" alt="City Image" />
+          <p>Pano Aqil</p>
+        </div>
+      </div>
+    </div>
+
+    <!--                                              ABOUT2                                              -->
+
+    <div id="about2">
+      <h1>Put us in your pocket</h1>
+      <div id="abt2Sec">
+        <div id="abt2lft">
+          <h2>Download the food and groceries you love</h2>
+          <span id="abt2lftText">
+            <img src="images/pkhomepageqrcode.png" alt="Qr Code" />
+            <p>
+              It's all at your fingertips – the restaurants and shops you love.
+              Find the right food and groceries to suit your mood, and make the
+              first bite last. Go ahead, download us.
+            </p>
+          </span>
+          <span id="abt2lftLogo">
+            <img src="images/appStore.svg" alt="App Store Logo" />
+            <img src="images/googlePlay.svg" alt="Google Play Logo" />
+            <img src="images/appGallery.svg" alt="App Gallery Logo" />
+          </span>
+        </div>
+        <div id="abt2rght">
+          <img src="images/foodpandaMobile.png" alt="Foodpanda On Mobile" />
+        </div>
+      </div>
+    </div>
+
+    <!--                                              OFFICE                                              -->
+    <div id="office">
+      <h1 class="head">Take your office out to lunch</h1>
+      <div id="officeSec">
+        <img src="images/officeImage.jpg" alt="About Images" id="abtImg" />
+        <div id="officeText">
+          <h2>foodpanda for business</h2>
+          <p>
+            Order lunch or fuel for work-from-home, late nights in the office,
+            corporate events, client meetings, and much more.
+          </p>
+          <span>
+            <button id="abtBtn">Get started</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!--                                              QUESTION                                            -->
+    <div id="question">
+      <h1>
+        Order food and groceries online from the best restaurants and shops on
+        foodpanda
+      </h1>
+      <p>
+        Are you hungry? Did you have a long and stressful day? Interested in
+        getting a cheesy pizza delivered to your office or looking to avoid the
+        weekly shop? Then foodpanda Pakistan is the right destination for you!
+        foodpanda offers you a long and detailed list of the best restaurants
+        and shops near you to help make your every day easier.
+      </p>
+      <h1>What's new?</h1>
+      <ul class="quesUl">
+        <li>
+          Wide variety of restaurants and shops, an abundance of cuisines &
+          products.
+        </li>
+        <li>High quality delivery service.</li>
+        <li>
+          Live chat feature to give App users instant help when they need it.
+        </li>
+        <li>
+          NEW: foodpanda grocery delivery! Discover the best shops, pharmacies,
+          bakeries and more near you.
+        </li>
+      </ul>
+      <h2 id="quesh2">Frequently Asked Questions</h2>
+      <h3>How can I get foodpanda delivery?</h3>
+      <p class="quesp">
+        To get foodpanda delivery, simply locate the restaurants and shops near
+        you by typing in your address, browse through a variety of restaurants
+        and cuisines, check menus and prices, choose your dishes and add them to
+        the basket. Now you only need to checkout and make the payment. Soon
+        your delicious food will arrive at your doorstep!
+      </p>
+      <h3 class="quesh3">Which takeout restaurants open now near me?</h3>
+      <p class="quesp">
+        You can check which takeout restaurants are open now near you by simply
+        typing your address in the location bar on foodpanda and pressing
+        search. You will see all the available restaurants and shops that
+        deliver to your area.
+      </p>
+      <h3 class="quesh3">Does foodpanda deliver 24 hours?</h3>
+      <p class="quesp">
+        Yes, foodpanda in Pakistan delivers 24 hours. However, many restaurants
+        may be unavailable for a late-night delivery. Please check which places
+        in Pakistan deliver to you within 24 hours by using your address. You
+        can also order groceries 24 hours a day via pandamart.
+      </p>
+      <h3 class="quesh3">Can you pay cash for foodpanda?</h3>
+      <p class="quesp">
+        Yes, you can pay cash on delivery for foodpanda in Pakistan.
+      </p>
+      <h3 class="quesh3">How can I pay foodpanda online?</h3>
+      <p class="quesp">
+        You can pay online while ordering at foodpanda Pakistan by using a
+        credit or debit card or PayPal.
+      </p>
+      <h3 class="quesh3">Can I order foodpanda for someone else?</h3>
+      <p class="quesp">
+        Yes, foodpanda Pakistan allows you to place an order for someone else.
+        During checkout, just update the name and delivery address of the person
+        you're ordering for. Please keep in mind that if the delivery details
+        are not correct and the order cannot be delivered, we won't be able to
+        process a refund.
+      </p>
+      <h4 class="quesh4">
+        Order food and groceries online with foodpanda now and enjoy a great
+        dining experience!
+      </h4>
+    </div>
+
+    <!--                                              FOOTER                                              -->
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="countries-row">
+          <span>Labs</span>
+          <span class="countries-row-border">|</span>
+          <span>Cambodia</span>
+          <span class="countries-row-border">|</span>
+          <span>Myanmar</span>
+          <span class="countries-row-border">|</span>
+          <span>Thailand</span>
+          <span class="countries-row-border">|</span>
+          <span>Hong Kong</span>
+          <span class="countries-row-border">|</span>
+          <span>Taiwan</span>
+          <span class="countries-row-border">|</span>
+          <span>Malaysia</span>
+          <span class="countries-row-border">|</span>
+          <span>Philippines</span>
+          <span class="countries-row-border">|</span>
+          <span>Singapore</span>
+          <span class="countries-row-border">|</span>
+          <span>Bangladesh</span>
+        </div>
+
+        <div class="links-container">
+          <div class="links-column">
+            <h3>&copy; foodpanda</h3>
+          </div>
+          <div class="links-column">
+            <ul>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">pandapay Terms and Conditions</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Cashback Terms and Conditions</a></li>
+              <li><a href="#">Partner with Us</a></li>
+              <li><a href="#">All cities</a></li>
+              <li><a href="#">pandapro - Monthly Subscription Programme</a></li>
+              <li><a href="#">Ramzan deals</a></li>
+              <li><a href="#">Areas delivered in Lahore</a></li>
+            </ul>
+          </div>
+
+          <div class="links-column">
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Terms and Conditions</a></li>
+              <li><a href="#">Download foodpanda Apps</a></li>
+              <li><a href="#">Suggest a Restaurant</a></li>
+              <li><a href="#">All cuisines</a></li>
+              <li><a href="#">pandago - Request a Rider</a></li>
+              <li><a href="#">Update on COVID-19 in Pakistan</a></li>
+              <li><a href="#">foodpanda Home Chef</a></li>
+            </ul>
+          </div>
+
+          <div class="links-column">
+            <ul>
+              <li><a href="#">Refunds with pandapay</a></li>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Human rights policy</a></li>
+              <li><a href="#">Corporate Customer</a></li>
+              <li><a href="#">foodpanda Magazine</a></li>
+              <li><a href="#">foodpanda Vouchers & Coupons</a></li>
+              <li><a href="#">pandamart Grocery Delivery</a></li>
+              <li><a href="#">Become an Affiliate</a></li>
+              <li><a href="#">Areas delivered in Gujranwala</a></li>
+              <li><a href="#">Areas delivered in Peshawar</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-logos">
+            <span id="footerPanda-logo">
+              <img src="images/navbarIcon.svg" alt="foodpanda logo" />
+              <img src="images/foodpanda.svg" alt="Foodpanda text logo" />
+            </span>
+            <span>
+              <img src="images/delivery.svg" alt="Delivery Hero logo" />
+            </span>
+          </div>
+          <div class="footer-socials">
+            <a href="#"
+              ><img src="images/instagram.svg" alt="Instagram" width="24"
+            /></a>
+            <a href="#"
+              ><img src="images/facebook.svg" alt="Facebook" width="24"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
